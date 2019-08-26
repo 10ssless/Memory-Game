@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Wrapper from "../Wrapper";
 
 class FlashCard extends React.Component {
   constructor(props) {

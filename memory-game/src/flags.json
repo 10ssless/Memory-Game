@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "USA",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png"
+  },
+  {
+    "id": 2,
+    "name": "Germany",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png"
+  },
+  {
+    "id": 3,
+    "name": "South Africa",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/2000px-Flag_of_South_Africa.svg.png"
+  },
+  {
+    "id": 4,
+    "name": "France",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png"
+  },
+  {
+    "id": 5,
+    "name": "Brazil",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png"
+  },
+  {
+    "id": 6,
+    "name": "Russia",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg"
+  },
+  {
+    "id": 7,
+    "name": "Morocco",
+    "image":
+      "https://www.worldatlas.com/r/w728-h425-c728x425/upload/8c/99/76/shutterstock-742638283.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Mexico",
+    "image":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png"
+  }
+]

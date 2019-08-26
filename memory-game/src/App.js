@@ -1,6 +1,7 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Center from "./components/Center";
 import FlashCard from "./components/FlashCard";
 import flags from "./flags.json";
 
@@ -8,15 +9,15 @@ import flags from "./flags.json";
 function App() {
   return (
     <Wrapper>
-      <Title>test your memory dont click the same flag twice</Title>
-      
-      {flags.map(item => (
-        <FlashCard 
-          name={item.name}
-          link={item.image}
-        />
-      ))}
-      
+      <Title>test-your-memory.-dont-click-the same-flag-twice.</Title>
+        <Center>
+          {flags.map(item => (
+            <FlashCard 
+              name={item.name}
+              link={item.image}
+            />
+          ))}
+        </Center>
     </Wrapper>
   );
 }

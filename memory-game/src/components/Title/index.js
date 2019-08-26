@@ -1,17 +1,17 @@
 import React from "react";
 import "./style.css";
 
-const prep = cc => {
-  let str = [];
-  for (let i = 0; cc.length; i++) {
-    if (cc.substring(i, i + 1) === "-") {
-      str.push(" ")
-    } else {
-      str.push(cc[i])
-    }
-  }
-  return str.join("")
-}
+// const prep = cc => {
+//   let str = [];
+//   for (let i = 0; cc.length; i++) {
+//     if (cc.substring(i, i + 1) === "-") {
+//       str.push(" ")
+//     } else {
+//       str.push(cc[i])
+//     }
+//   }
+//   return str.join("")
+// }
 
 class Title extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Title extends React.Component {
     this.state = { index: 0, count: 0 };
     // let title = props.children.split(" ")
     // this.words = title.map(prep)
-    this.words = props.children.split(" ")
+    this.words = props.children.split("-")
   }
 
   tick() {
@@ -30,7 +30,7 @@ class Title extends React.Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 650);
+    this.interval = setInterval(() => this.tick(), 600);
   }
 
   componentWillUnmount() {

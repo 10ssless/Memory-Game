@@ -42,7 +42,7 @@ class App extends React.Component {
   render(){
     return (
       <Wrapper>
-        <Title>test-your-memory.-dont-click-the same-flag-twice.</Title>
+        <Title>test-your-memory.-don't-click-the same-flag-twice.</Title>
           <div id="tab">
             <span class="scores score">score: {this.state.clicked.length}</span> 
             <span class="scores top-score">top score: {this.state.topScore}</span>

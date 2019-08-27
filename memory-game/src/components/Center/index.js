@@ -1,15 +1,11 @@
 import React from "react";
 import "./style.css";
 
-class Center extends React.Component {
-  constructor(props) {
-      super(props)    
-  }
+function Center(props) {
 
-  render() {
-    return (
-      <div className="flags">{this.props.children}</div>
-    )}
+  return (
+    <div className="flags">{props.children}</div>
+  )
 }
 
 export default Center;

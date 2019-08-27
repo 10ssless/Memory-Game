@@ -11,3 +11,9 @@
     top: 10px;
     right: 20px;
 }
+
+#caption {
+    float:left;
+    clear:both;
+    font-style: italic;
+}

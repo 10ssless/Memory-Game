@@ -11,7 +11,8 @@ class App extends React.Component {
   state = {
     flags,
     clicked:[],
-    topScore:0
+    topScore:0,
+    current:""
   }
 
   //shuffle array
@@ -39,6 +40,14 @@ class App extends React.Component {
     this.shuffle()
   }
 
+  handleMouseEnter = name => {
+    this.setState({country:name})
+  }
+  
+  handleMouseLeave = () => {
+    this.setState({country:""})
+  }
+
   render(){
     return (
       <Wrapper>
@@ -54,9 +63,12 @@ class App extends React.Component {
                 name={item.name}
                 link={item.image}
                 handleClick={this.handleClick}
+                handleMouseEnter={this.handleMouseEnter}
+                handleMouseLeave={this.handleMouseLeave}
               />
             ))}
           </Center>
+          <div id="caption">{this.state.country}</div>
       </Wrapper>
     )
   }

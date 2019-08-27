@@ -3,7 +3,7 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Center from "./components/Center";
 import FlashCard from "./components/FlashCard";
-import flags from "./flags.json";
+import flags from "./flags.json.js";
 
 
 class App extends React.Component {

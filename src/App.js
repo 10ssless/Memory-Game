@@ -53,17 +53,18 @@ class App extends React.Component {
       <Wrapper>
         <Title>test-your-memory.-don't-click-the same-flag-twice.</Title>
           <div id="tab">
-            <span class="scores score">score: {this.state.clicked.length}</span> 
-            <span class="scores top-score">top score: {this.state.topScore}</span>
+            <span className="scores score">score: {this.state.clicked.length}</span> 
+            <span className="scores top-score">top score: {this.state.topScore}</span>
           </div>
           <Center>
             {this.state.flags.map(item => (
               <FlashCard 
                 id={item.id}
+                key={item.id}
                 name={item.name}
                 link={item.image}
                 handleClick={this.handleClick}
-                handleMouseEnter={this.handleMouseEnter}
+                handleMouseEnter={this.handleMouseEnter}  
                 handleMouseLeave={this.handleMouseLeave}
               />
             ))}
@@ -74,25 +75,5 @@ class App extends React.Component {
   }
 }
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

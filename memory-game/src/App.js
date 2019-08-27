@@ -6,20 +6,60 @@ import FlashCard from "./components/FlashCard";
 import flags from "./flags.json";
 
 
-function App() {
-  return (
-    <Wrapper>
-      <Title>test-your-memory.-dont-click-the same-flag-twice.</Title>
-        <Center>
-          {flags.map(item => (
-            <FlashCard 
-              name={item.name}
-              link={item.image}
-            />
-          ))}
-        </Center>
-    </Wrapper>
-  );
+class App extends React.Component {
+  
+  state = {
+    flags,
+    clicked:[],
+    topScore:0
+  }
+
+  //shuffle array
+  shuffle = () => {
+    const flags = this.state.flags.sort((a, b) => {
+      return 0.5 - Math.random()
+    });
+    this.setState({flags})
+  }
+
+  // handle which flag was clicked
+  handleClick = id => {
+    if (this.state.clicked.includes(id)) {
+        
+      this.setState(state => ({
+        clicked: []
+      }))
+    } 
+    else {
+      this.setState(state => ({
+        clicked: [...state.clicked, id],
+        topScore: state.clicked.length > state.topScore ? state.clicked.length : state.topScore
+      }))
+    }
+    this.shuffle()
+  }
+
+  render(){
+    return (
+      <Wrapper>
+        <Title>test-your-memory.-dont-click-the same-flag-twice.</Title>
+          <div>
+            <span class="scores score">score: {this.state.clicked.length}</span> 
+            <span class="scores top-score">top score: {this.state.topScore}</span>
+          </div>
+          <Center>
+            {this.state.flags.map(item => (
+              <FlashCard 
+                id={item.id}
+                name={item.name}
+                link={item.image}
+                handleClick={this.handleClick}
+              />
+            ))}
+          </Center>
+      </Wrapper>
+    )
+  }
 }
 
 // function App() {

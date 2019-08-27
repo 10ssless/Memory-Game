@@ -17,12 +17,13 @@ class Title extends React.Component {
   constructor(props) {
     super(props);
     this.state = { index: 0, count: 0 };
+    this.words = props.children.split("-")
+    
     // let title = props.children.split(" ")
     // this.words = title.map(prep)
-    this.words = props.children.split("-")
   }
 
-  tick() {
+  flash() {
     this.setState(state => ({
       index: state.count % this.words.length,
       count: state.count+1
@@ -30,7 +31,7 @@ class Title extends React.Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 600);
+    this.interval = setInterval(() => this.flash(), 600);
   }
 
   componentWillUnmount() {

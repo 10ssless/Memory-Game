@@ -32,6 +32,10 @@
   margin:35px;
 }
 
+.img-container:hover {
+  box-shadow: 2px 2px 4px gray;
+}
+
 img {
   width: 200px;
   height: 120px;

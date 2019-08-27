@@ -33,7 +33,7 @@ class App extends React.Component {
     else {
       this.setState(state => ({
         clicked: [...state.clicked, id],
-        topScore: state.clicked.length > state.topScore ? state.clicked.length : state.topScore
+        topScore: state.clicked.length+1 > state.topScore ? state.clicked.length+1 : state.topScore
       }))
     }
     this.shuffle()
@@ -43,7 +43,7 @@ class App extends React.Component {
     return (
       <Wrapper>
         <Title>test-your-memory.-dont-click-the same-flag-twice.</Title>
-          <div>
+          <div id="tab">
             <span class="scores score">score: {this.state.clicked.length}</span> 
             <span class="scores top-score">top score: {this.state.topScore}</span>
           </div>

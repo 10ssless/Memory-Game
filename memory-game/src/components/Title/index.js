@@ -40,7 +40,7 @@ class Title extends React.Component {
 
   render() {
     return (
-      <h2 className="title">{this.words[this.state.index]}</h2>
+      <a href="/"><h2 className="title">{this.words[this.state.index]}</h2></a>
     );
   }
 }

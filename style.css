@@ -1,0 +1,19 @@
+.flag-center {
+    margin: 400px;
+}
+
+.scores {
+    margin: 30px;
+}
+
+#tab {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+#caption {
+    float:left;
+    clear:both;
+    font-style: italic;
+}
